@@ -1,0 +1,129 @@
+= Pflichtenheft
+:toc: right
+
+== Lehrstuhlbibliothek
+
+
+NOTE: ToDo: Nummerierung einfügen.
+
+=== 1. Zielbestimmung
+
+==== 1.1 Musskriterien
+
+* /M10/ Medien und Nutzer müssen dem System hinzugefügt werden, bearbeitet und aus dem System entfernt werden können.
+* /M20/ Medien müssen nach Typ kategorisiert werden.
+* /M30/ Es muss eine Rechteverwaltung vorhanden sein, die Rechte nach Gruppen (innerhalb Gruppe gleiche Rechte) vergibt.
+* /M40/ Die Gruppen: "Administrator, Verwaltung, Nutzergruppe und Gastgruppe" müssen implementiert sein.
+* /M50/ Ein Administrator hat uneingeschränkte Rechte (insbesondere auch Rechte der Verwaltung).
+* /M60/ Gruppen müssen von den Administratoren verwaltet, gelöscht und hinzugefügt werden. Außerdem müssen diese, Gruppenrechte erweitern oder löschen.
+* /M70/ Bearbeitung des Nutzer- bzw. Medienkatalog muss durch die Verwaltung geschehen.
+* /M80/ Bearbeitung der Ausleih- bzw. Vorbestellvorgänge muss durch die Verwaltung geschehen.
+* /M90/ Ein Nutzer aus der Gruppe "Nutzergruppe" muss im System registriert sein.
+* /M110 Ein Nutzer aus der "Nutzergruppe" hat das Recht seine eigene Benutzerseite zu bearbeiten, Medien auszuleihen und auch diese vorzubestellen.
+* /M120/ Ein Nutzer aus der Gruppe "Gastgruppe" muss im System (vereinfacht) registriert sein.
+* /M130/ Ein Nutzer aus der "Gastgruppe" hat nur eingeschränkte Rechte. Das bedeutet er kann nur beschränkt Medien ausleihen.
+* /M140/ Jede Person muss sich im System registrieren können. Diese Registrierung muss von der Verwaltung  bestätigt werden.
+* /M150/ Ein Medium muss ausgeliehen werden können und auch falls es ausgeliehen ist, vorbestellt werden können.
+* /M160/ Jedes Medium hat eine vorgeschriebene maximale Ausleihdauer, welche durch die verschiedenen Gruppen auch abweichen kann.
+* /M170/ Die Verwaltung muss diese Ausleihdauer abändern können.
+* /M180/ Ein Verlängerung der Ausleihdauer muss jederzeit möglich sein, aber nur, falls das gewünschte Medium nicht vorbestellt wurde.
+* /M190/ Es muss einen Monitor geben, der selbstständig überfällige Ausleihfristen erkennt und über eine E-Mail Warnungen und Mahnungen versendet.
+* /M200/ Eine Suchfunktion muss implementiert werden, welche über alle Kataloge (Nutzer/ Medien/ Ausleih-/ Vorbestellvorgänge) nach Metadaten und Inhalt sucht.
+
+
+==== 1.2 Wunschkriterien
+
+* Das Interface soll übersichtlich und zudem noch einfach zu bedienen sein.
+* Nutzer können über ihre Nutzerseite Medien ausleihen und bekommen über E-Mail ein Abholticket zur Abholung zugesandt.
+
+==== 1.3 Abgrenzungskriterien
+
+Dies ist eine reine Verwaltungssoftware. Die Software setzt ein funktionierendes Netzwerk voraus (Netzwerktreiber und Ähnliches wird nicht bereitgestellt). Zudem ist keine Buchhaltung für Mahnungsgebühren enthalten.
+
+=== 2. Produkteinsatz
+
+==== 2.1 Anwendungsbereiche
+
+Organisation und Verwaltung von der Lehrstuhlbibliothek.
+
+==== 2.2 Zielgruppen
+
+Mitarbeiter und Studenten der Technischen Universität Dresden. Dies lässt sich gliedern in:
+
+* Administratoren des Systems
+* Verwaltungspersonal der Lehrstuhlbibliothek
+* Nutzer der Lehrstuhlbibliothek
+
+==== 2.3 Betriebsbedingungen
+
+* Zimmertemperatur
+* stabile Stromversorgung
+* Sonne darf unsere Software niemals berühren (-> zerfällt sonst zu Staub)
+
+=== 3. Produktumgebung
+
+==== 3.1 Software
+
+===== Client
+* Webbrowser mit Unterstützung von HTML5 und CSS3, JavaScript erwünscht aber nicht erforderlich. Empfohlene Browser sind:
+** Microsoft Edge
+** Mozilla Firefox
+** Chrome
+** Safari
+** Opera
+** für andere Browser wird keien Unterstützung garantiert
+
+===== Server
+
+* Java Laufzeitumgebung mit Unterstützung für Java 1.8
+
+
+==== 3.2 Hardware
+* Desktop-PC oder Laptop mit mindestens 1024x768 Pixeln Auflösung
+* Netzwerkverbindung zum Universitätsnetzwerk erforderlich
+
+==== 3.3 Orgware
+
+* Verbindung des Servers zum Universitätsnetzwerks
+
+==== 3.4 Produkt - Schnittstellen
+
+NOTE: ToDo: Kontextdiagramm einfügen
+
+=== 4. Produktinformationen
+
+NOTE: ToDo
+
+=== 5. Produktdaten
+
+NOTE: ToDo: Alle Daten die im System vorkommen. Attribute und maximale Anzahl, der in der Datenbank bereitzustellenden Entitäten.
+
+=== 6. Produkt - Leistungen
+
+NOTE: ToDo
+
+=== 7. Benutzeroberfläche
+
+NOTE: ToDo: GUI mit Bild zeichnen. Nicht nur ein Teil der GUI. 1 Stück. Mit Beschreibung. Wie auf balzert Folie 13.
+
+=== 8. Qualitäts - Zielbestimmung
+
+[options="header", cols="3h, ^1, ^1, ^1, ^1, ^1"]
+|===
+|Qualitätsanforderungen	| 1 | 2 | 3 | 4 | 5	
+|Wartbarkeit			|	|   |   |   | x 
+|Erweiterbarkeit		|   |   | x |   |	
+|Benutzerfreundlichkeit	|	|   |   | x |   
+|Skalirbarkeit			|	| x |   |   |   
+|Zuverlässigkeit		|   |   | x |   |	
+|Sicherheit				|   |   |   | x |	
+|Leistungsfähigkeit		|   |	| x |   |	
+|===
+
+=== 9. Globale Testszenarien/ Akzeptanztestfälle
+
+NOTE: ToDo: Fast das gleiche wie Musskriterien nur hübscher mit Tabelle.
+
+=== 10. Glossar / Ontologie
+
+NOTE: Braucht kein SChwein
