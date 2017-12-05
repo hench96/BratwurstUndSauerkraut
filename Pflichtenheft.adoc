@@ -122,15 +122,25 @@ NOTE: ToDo
 ==== GUI Skizzen
 
 /G10/ Anmeldebildschirm
-image::../Bilder/Loggin.jpg[Anmeldebildschirm, 100%, title="Anmeldebildschirm"]
+
+image::/Bilder/Loggin.jpg[Anmeldebildschirm, 100%, title="Anmeldebildschirm"]
+
 /G20/ Gastzugang
-image::../Bilder/Gast.jpg[Gastzugang, 100%, title="Gastzugang"]
+
+image::/Bilder/Gast.jpg[Gastzugang, 100%, title="Gastzugang"]
+
 /G30/ Nutzerzugang
-image::../Bilder/Nutzer.jpg[Nutzerzugang, 100%, title="Nutzerzugang"]
+
+image::/Bilder/Nutzer.jpg[Nutzerzugang, 100%, title="Nutzerzugang"]
+
 /G40/ Verwaltungszugang
-image::../Bilder/Verwaltung.jpg[Verwaltungszugang, 100%, title="Verwaltungszugang"]
+
+image::/Bilder/Verwaltung.jpg[Verwaltungszugang, 100%, title="Verwaltungszugang"]
+
 /G50/ Administratorzugang
-image::../Bilder/Administrator.jpg[Administratorzugang, 100%, title="Administratorzugang"]
+
+image::/Bilder/Administrator.jpg[Administratorzugang, 100%, title="Administratorzugang"]
+
 
 === 8. Qualitäts - Zielbestimmung
 
