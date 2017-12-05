@@ -104,7 +104,33 @@ NOTE: ToDo
 
 === 7. Benutzeroberfläche
 
-NOTE: ToDo: GUI mit Bild zeichnen. Nicht nur ein Teil der GUI. 1 Stück. Mit Beschreibung. Wie auf balzert Folie 13.
+/B10/ Standardmäßig ist das Wondows-Regelwerk zu beachten.
+/B20/ Die Bedienungsoberfläche ist auf Mausbedienung auszulegen.
+/B30/ Die Bedienungsoberfläche ist für Web-Browser zu erstellen.
+	Im Kopf befindet sich ein Menü. Die Hauptelemente werden zentral im Hauptrahmen angezeigt.
+	Details befinden sich in den Gui-Skizzen.
+/B40/ Es werden folgende Rollen unterschieden:
+	[options="header"]
+	|===
+	|Rolle			|Rechte
+	|Administrator	|Gruppenverwaltung, Medienkatalogverwaltung, Nutzerkatalogverwaltung, Ausleih-/Vorbestellvorgänge, Suche
+	|Verwaltung		|Medienkatalogverwaltung, Nutzerkatalogverwaltung, Ausleihvorgänge, Vorbestellvorgänge, Suche
+	|Nutzer			|eigene Nutzerseiteverwaltung, Ausleihen, Vorbestellen, Suche
+	|Gast			|eigene Nutzerseite anzeigen, Ausleihen, Suche
+	|Unangemeldet	|Anmeldebildschirm
+
+==== GUI Skizzen
+
+/G10/ Anmeldebildschirm
+image::../Bilder/Loggin.jpg[Anmeldebildschirm, 100%, title="Anmeldebildschirm"]
+/G20/ Gastzugang
+image::../Bilder/Gast.jpg[Gastzugang, 100%, title="Gastzugang"]
+/G30/ Nutzerzugang
+image::../Bilder/Nutzer.jpg[Nutzerzugang, 100%, title="Nutzerzugang"]
+/G40/ Verwaltungszugang
+image::../Bilder/Verwaltung.jpg[Verwaltungszugang, 100%, title="Verwaltungszugang"]
+/G50/ Administratorzugang
+image::../Bilder/Administrator.jpg[Administratorzugang, 100%, title="Administratorzugang"]
 
 === 8. Qualitäts - Zielbestimmung
 
@@ -122,7 +148,21 @@ NOTE: ToDo: GUI mit Bild zeichnen. Nicht nur ein Teil der GUI. 1 Stück. Mit Bes
 
 === 9. Globale Testszenarien/ Akzeptanztestfälle
 
-NOTE: ToDo: Fast das gleiche wie Musskriterien nur hübscher mit Tabelle.
+[options="header"]
+|===
+| ID |Beschreibung
+|A10 |Die Software kann installiert und gestartet werden.
+|A20 |Neue Nutzer können sich registrieren und registrierte Nutzer können sich anmelden.
+|A30 |Es ist eine Rechteverwaltung in Gruppen vorhanden. Nutzer können diesen Gruppen hinzugefügt und wieder entfernt werden.
+|A40 |Es sind 4 voreingestellte Gruppen vorhanden: Administrator, Verwaltung, Nutzer, Gast
+|A50 |Administratoren haben uneingeschränkte Rechte und können Gruppen verwalten.
+|A60 |Die Verwaltung kann den Medienkatalog, den Nutzerkatalog und sämtliche Ausleih-/Vorbestellvorgänge bearbeiten.
+|A70 |Registrierte Nutzer können ihre Nutzerseite bearbeiten, Medien ausleihen und Medien vorbestellen.
+|A80 |Nutzer der Gastgruppe sind vereinfacht registiert und haben eingeschränkte Rechte.
+|A90 |Medien können ausgeliehen und vorbestellt werden.
+|A100|Die Software erkennt selbständig überfällige Ausleihfristen und gibt in diesem Fall eine Warnung aus.
+|A110|Es gibt eine Suchfunktion, die in allen Katalogen (Nutzer/ Medien/ Ausleih-/Vorbestellvorgänge) nach Metadaten und Inhalt sucht.
+|===
 
 === 10. Glossar / Ontologie
 
