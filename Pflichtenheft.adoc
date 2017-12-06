@@ -96,11 +96,45 @@ NOTE: ToDo
 
 === 5. Produktdaten
 
-NOTE: ToDo: Alle Daten die im System vorkommen. Attribute und maximale Anzahl, der in der Datenbank bereitzustellenden Entitäten.
+==== 5.1 Nutzerdaten
+* /D10/ Daten von registrierter Nutzer (max. 50.000)
+** NutzerID, Vorname, Nachname, Geburtsdatum, E-Mail Adresse, Gruppe
+* /D11/ Daten von Gästen (max. 10.000)
+** NutzerID, Vorname, Nachname, Geburtsdatum, E-Mail Adresse, Zugangsberechtigung_bis, Gruppe
+* /D20/ Personaldaten (max. 100)
+** PersonalID, Vorname, Nachname, Geburtsdatum, E-Mail Adresse, Gruppe
+
+==== 5.2 Mediendaten
+* /D30/ Mediendaten (max. 1.000.000)
+** InternationaleID, Erscheinungsdatum, MediumID, Titel, maximale_Ausleihdauer, Kurzbeschreibung, ist_vorbestellt, ist_ausgeliehen, Autor, Herausgeber, Typ
+* /D40/ Typ (für die Mediendaten)
+** DVD, CD, Sonstiges, Buch, Zeitschrift, Proschüre
+
+==== 5.3 Vorgangsdaten
+* /D50/ Ausleihvorgang (max. 100.000)
+** Ausleihdauer, Ausleihdatum, Medium, Nutzer
+* /D60/ Vorbestellvorgang (max. 100.000)
+** Medium, Nutzer
+
 
 === 6. Produkt - Leistungen
 
-NOTE: ToDo
+* /L10/ Suche über die gesamten Kataloge (Nutzer/ Medien/ Ausleih-/ Vorbestellvorgänge)
+** Zeit für Ausführung: < 10ms
+** Datentransfervolumen: <1kB
+** Datentransferdauer: <10ms
+* /L20/ Selbstständiges Erkennen von überfälligen Ausleihfristen
+** Zeit für Ausführung: <10ms
+** Datentransfervolumen: <4Byte
+** Datentransferdauer: gesamte Laufzeit
+* /L30/ Versendung von Mahnungen/Warnungen
+** Zeit für Ausführung: <10s
+** Datentransfervolumen: <1kB
+** Datentransferdauer: <10s
+* /L40/ Registrierung von Nutzern im Systems (pro Person)
+** Zeit für Ausführung: <10ms
+** Datentransfervolumen: 30Byte
+** Datentransferdauer: <1s
 
 === 7. Benutzeroberfläche
 
