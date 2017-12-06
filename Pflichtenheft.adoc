@@ -144,14 +144,15 @@ NOTE: ToDo
 	Im Kopf befindet sich ein Menü. Die Hauptelemente werden zentral im Hauptrahmen angezeigt.
 	Details befinden sich in den Gui-Skizzen.
 /B40/ Es werden folgende Rollen unterschieden:
-	[options="header"]
-	|===
-	|Rolle			|Rechte
-	|Administrator	|Gruppenverwaltung, Medienkatalogverwaltung, Nutzerkatalogverwaltung, Ausleih-/Vorbestellvorgänge, Suche
-	|Verwaltung		|Medienkatalogverwaltung, Nutzerkatalogverwaltung, Ausleihvorgänge, Vorbestellvorgänge, Suche
-	|Nutzer			|eigene Nutzerseiteverwaltung, Ausleihen, Vorbestellen, Suche
-	|Gast			|eigene Nutzerseite anzeigen, Ausleihen, Suche
-	|Unangemeldet	|Anmeldebildschirm
+[options="header"]
+|===
+|Rolle			|Rechte
+|Administrator	|Gruppenverwaltung, Medienkatalogverwaltung, Nutzerkatalogverwaltung, Ausleih-/Vorbestellvorgänge, Suche
+|Verwaltung		|Medienkatalogverwaltung, Nutzerkatalogverwaltung, Ausleihvorgänge, Vorbestellvorgänge, Suche
+|Nutzer			|eigene Nutzerseiteverwaltung, Ausleihen, Vorbestellen, Suche
+|Gast			|eigene Nutzerseite anzeigen, Ausleihen, Suche
+|Unangemeldet	|Anmeldebildschirm
+|===
 
 ==== GUI Skizzen
 
