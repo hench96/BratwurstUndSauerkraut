@@ -138,12 +138,12 @@ NOTE: ToDo
 
 === 7. Benutzeroberfläche
 
-/B10/ Standardmäßig ist das Wondows-Regelwerk zu beachten.
-/B20/ Die Bedienungsoberfläche ist auf Mausbedienung auszulegen.
-/B30/ Die Bedienungsoberfläche ist für Web-Browser zu erstellen.
-	Im Kopf befindet sich ein Menü. Die Hauptelemente werden zentral im Hauptrahmen angezeigt.
-	Details befinden sich in den Gui-Skizzen.
-/B40/ Es werden folgende Rollen unterschieden:
+* /B10/ Standardmäßig ist das Wondows-Regelwerk zu beachten.
+* /B20/ Die Bedienungsoberfläche ist auf Mausbedienung auszulegen.
+* /B30/ Die Bedienungsoberfläche ist für Web-Browser zu erstellen.
+	** Im Kopf befindet sich ein Menü. Die Hauptelemente werden zentral im Hauptrahmen angezeigt.
+	** Details befinden sich in den Gui-Skizzen.
+* /B40/ Es werden folgende Rollen unterschieden:
 [options="header"]
 |===
 |Rolle			|Rechte
