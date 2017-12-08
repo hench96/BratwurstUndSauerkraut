@@ -208,7 +208,7 @@ image::/Bilder/Administrator.jpg[Administratorzugang, 100%, title="Administrator
 |A110|Es gibt eine Suchfunktion, die in allen Katalogen (Nutzer/ Medien/ Ausleih-/Vorbestellvorgänge) nach Metadaten und Inhalt sucht.
 |===
 
-=== 10. Glossar / Ontologie
+=== 10. Glossar
 
-Orgware - Zusätzliche Rahmenbedingungen
+Orgware - Zusätzliche Rahmenbedingungen +
 GUI - (engl. graphical user interface) grafische Benutzeroberfläche
