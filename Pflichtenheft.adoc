@@ -88,7 +88,7 @@ Mitarbeiter und Studenten der Technischen Universität Dresden. Dies lässt sich
 
 ==== 3.4 Produkt - Schnittstellen
 
-NOTE: ToDo: Kontextdiagramm einfügen
+image::/Bilder/Contextdiagram2.jpeg[Kontextdiagramm, 50%, title="Kontextdiagram"]
 
 === 4. Produktinformationen
 
