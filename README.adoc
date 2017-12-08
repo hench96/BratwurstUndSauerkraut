@@ -1,11 +1,9 @@
-BratwurstUndSauerkraut
-
-Unigruppe
+= BratwurstUndSauerkraut Unigruppe
 
 
 Antonia Beutler +
 Hendrik Ehrhardt +
-Alexander Pötzsch
+Alexander PÃ¶tzsch +
 
-Das ist das Repository für die Übung aus Softwaretechnologie II.
-Die einzelnen Übungsergebnisse sind in die Ordner sortiert.
+Das ist das Repository fÃ¼r die Ãœbung aus Softwaretechnologie II. +
+Die einzelnen Ãœbungsergebnisse sind in die Ordner sortiert.
