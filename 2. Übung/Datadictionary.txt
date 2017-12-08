@@ -1,0 +1,10 @@
+
+Get-Methode ::= [Get_Ausleihvorgang | Get_Vorbestellvorgang | Get_Medium | Get_Nutzer]
+Daten ::= [Ausleihvorgang | Vorbestellvorgang | Medium | Nutzer]
+Download ::= (Prozessinitialisierung) [Anfrage | Zugangsdaten]
+Upload ::= [E-Mail | Darstellung]
+E-Mail ::= [Mahnung | Warnung | Abholticket]
+Zugangsdaten ::= [Benutzername | Passwort]
+Anfrage ::= [Suchantrag | Ausleihantrag | Vorbestellantrag | Verwaltungsantrag]
+Antwort ::= [Ergebnis | Bestätigung | Ablehnung]
+Verwaltungsantrag ::= [Änderungsantrag | Löschantrag | Erstellantrag]

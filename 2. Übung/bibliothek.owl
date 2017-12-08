@@ -1,0 +1,514 @@
+@prefix : <http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4> .
+
+<http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Mitglied_bei
+:Mitglied_bei rdf:type owl:ObjectProperty ;
+              rdfs:domain :Nutzer ;
+              rdfs:range :Gruppe ;
+              rdfs:comment "Ein Nutzer ist Mitglied bei einer bestimmten Gruppe." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Nutzt_zur_Verwaltung
+:Nutzt_zur_Verwaltung rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Verwaltung ;
+                      rdfs:range :Verwaltungsoberfläche ;
+                      rdfs:comment "Die Verwaltung nutzt zum verwalten von Medien oder Nutzern die Verwaltungsoberfläche." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#administrieren
+:administrieren rdf:type owl:ObjectProperty ;
+                rdfs:domain :Administrator ;
+                rdfs:range :System ;
+                rdfs:comment "Ein Administrator (oder mehrere) administriert(/administrieren) das gesamte System." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#beteiligt_an
+:beteiligt_an rdf:type owl:ObjectProperty ;
+              rdfs:domain :Bibliotheksvorgang ;
+              rdfs:range :Medium ,
+                         :Nutzer ;
+              rdfs:comment "Für einen Bibliotheksvorgang müssen jeweils mindestens ein Nutzer und mindestens ein Medium beteiligt sein." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#durchsucht_Datenbank
+:durchsucht_Datenbank rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Suchmodul ;
+                      rdfs:range :Medienverwaltung ,
+                                 :Nutzerverwaltung ;
+                      rdfs:comment "Das Suchmodul durchsucht die Medienverwaltung und die Nutzerverwaltung." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#gibt_Warnung_über
+:gibt_Warnung_über rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Monitor ;
+                   rdfs:range :Grafikoberfläche ;
+                   rdfs:comment "Der Monitor gibt Warnungen und Mahnungen über die Überfälligkeit von Medien durch die Grafikoberfläche an." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#hat_Autor
+:hat_Autor rdf:type owl:ObjectProperty ;
+           rdfs:domain :Print ;
+           rdfs:range :Autor ;
+           rdfs:comment "Ein Print-Medium hat einen bestimmten Autor." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#hat_Zugang
+:hat_Zugang rdf:type owl:ObjectProperty ;
+            rdfs:domain :System ;
+            rdfs:range :Netzwerk ;
+            rdfs:comment "Das System hat Zugang zum Netzwerk, damit man von außerhalb der Bibliothek auf das System zugreifen kann." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#teilt_Vorbestellung_mit
+:teilt_Vorbestellung_mit rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Monitor ;
+                         rdfs:range :Medienverwaltung ;
+                         rdfs:comment "Der Monitor teilt der Medienverwaltung die Statusänderung eines Mediums  in Form einer Vorbestellung mit." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#verwalten_der_eigenen_Nutzerdaten
+:verwalten_der_eigenen_Nutzerdaten rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :Registrierter_Nutzer ;
+                                   rdfs:range :Benutzeroberfläche ;
+                                   rdfs:comment "Ein Registrierter_Nutzer kann seine eigenen Nutzerdaten selber über die Benutzeroberfläche ändern." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#verwalten_und_bereitstellen_von_Medien
+:verwalten_und_bereitstellen_von_Medien rdf:type owl:ObjectProperty ;
+                                        rdfs:domain :Medienverwaltung ;
+                                        rdfs:range :Medium ;
+                                        rdfs:comment "Die Medienverwaltung verwaltet Medien und stellt diese für die Nutzer bereit." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#verwalten_und_bereitstellen_von_Nutzern
+:verwalten_und_bereitstellen_von_Nutzern rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :Nutzerverwaltung ;
+                                         rdfs:range :Nutzer ;
+                                         rdfs:comment "Die Nutzerverwaltung verwaltet Nutzer." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#wurde_herausgegeben_von
+:wurde_herausgegeben_von rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Medium ;
+                         rdfs:range :Herausgeber ;
+                         rdfs:comment "Ein Medium wurde von einem bestimmten Herausgeber veröffentlicht." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#zeigt_an_und_gibt_Zugriff_auf
+:zeigt_an_und_gibt_Zugriff_auf rdf:type owl:ObjectProperty ;
+                               rdfs:domain :Grafikoberfläche ;
+                               rdfs:range :Medienverwaltung ,
+                                          :Nutzerverwaltung ,
+                                          :Suchmodul ;
+                               rdfs:comment "Die Grafikoberfläche gibt Zugriff auf das Suchmodul und die Medien-/Nutzerverwaltung und zeigt diese Module an." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#überwacht
+:überwacht rdf:type owl:ObjectProperty ;
+           rdfs:domain :Monitor ;
+           rdfs:range :Bibliotheksvorgang ;
+           rdfs:comment "Der Monitor überwacht die Bibliotheksvorgänge." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Ausleihdatum
+:Ausleihdatum rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Ausleihvorgang ;
+              rdfs:range xsd:dateTime ;
+              rdfs:comment "Ausleihdauer = Datum, wann ein Medium ausgeliehen wurde." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Ausleihdauer
+:Ausleihdauer rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Ausleihvorgang ;
+              rdfs:range xsd:int ;
+              rdfs:comment "Ausleihdauer = Dauer der Ausleihe in Tagen" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Erscheinungsdatum
+:Erscheinungsdatum rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Medium ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:comment "Erscheinungsdatum = Veröffentlichungsdatum eines Mediums" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Firmenname
+:Firmenname rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Institutionen ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Firmenname = Name einer Institution" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Firmensitz
+:Firmensitz rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Institutionen ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Firmensitz = Sitz einer Institution (Land + Stadt)" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Geburtsdatum
+:Geburtsdatum rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Person ;
+              rdfs:range xsd:dateTime ;
+              rdfs:comment "Geburtsdatum = Datum der Geburt einer Person" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Internationale-ID
+:Internationale-ID rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Medium ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Internationale-ID = ID zur Unterscheidung von Medien im internationalen Raum" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Kurzbeschreibung
+:Kurzbeschreibung rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Medium ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Kurzbeschreibung = Text, der ein Medium kurz beschreibt" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Medium-ID
+:Medium-ID rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Medium ;
+           rdfs:range xsd:long ;
+           rdfs:comment "Medium-ID = ID zur Identifizierung eines bestimmten Mediums in der Bibliotheksdatenbank" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Nachname
+:Nachname rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Person ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Nachname = Familienname einer Person" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Nutzer-ID
+:Nutzer-ID rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Nutzer ;
+           rdfs:range xsd:int ;
+           rdfs:comment "Nutzer-ID = ID zur Identifizierung eines bestimmten Nutzers in der Bibliotheksdatenbank" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Titel
+:Titel rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Medium ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Titel = Titel eines Mediums" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Vorname
+:Vorname rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Person ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Vorname = Vorname (auch Zweitname, etc.) einer Person" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Zugangsberechtigung_bis
+:Zugangsberechtigung_bis rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Gast ;
+                         rdfs:range xsd:dateTime ;
+                         rdfs:comment "Zugangsberechtigung_bis = Datum, an dem die Zugangsberechtigung eines Nutzers (Gruppe - Gast - Registrierter_Nutzer) verfällt." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#ist_ausgeliehen
+:ist_ausgeliehen rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Medium ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:comment "ist_ausgeliehen = Statusanzeige, ob ein Medium ausgeliehen ist" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#ist_vorbestellt
+:ist_vorbestellt rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Medium ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:comment "ist_vorbestellt = Statusanzeige, ob ein Medium vorbestellt ist" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#maximale_Ausleihdauer
+:maximale_Ausleihdauer rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Medium ;
+                       rdfs:range xsd:int ;
+                       rdfs:comment "maximale_Ausleihdauer = Für jedes Medium unterschiedliche Angabe über die maximale Anzahl an Tagen, die ein Medium ausgeliehen werden kann" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Administrator
+:Administrator rdf:type owl:Class ;
+               rdfs:subClassOf :Verwaltung ;
+               rdfs:comment "Ein \"Administrator\" erbt von der \"Verwaltung\"-Klasse und wartet zudem das System und besitzt somit allumfassende Rechte." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Ausleihvorgang
+:Ausleihvorgang rdf:type owl:Class ;
+                rdfs:subClassOf :Bibliotheksvorgang ;
+                rdfs:comment "Ein \"Ausleihvorgang\" ist der Vorgang der für die Leihe eines Buches zuständig ist." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Autor
+:Autor rdf:type owl:Class ;
+       rdfs:subClassOf :Person ;
+       rdfs:comment "Ein \"Autor\" ist ein verfasser eines \"Print\"-Mediums." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Benutzeroberfläche
+:Benutzeroberfläche rdf:type owl:Class ;
+                    rdfs:subClassOf :Grafikoberfläche ;
+                    rdfs:comment "Die \"Benutzeroberfläche\" ist die Oberfläche die der \"Registrierte_Nutzer\" verwenden kann." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Bibliotheksvorgang
+:Bibliotheksvorgang rdf:type owl:Class ;
+                    rdfs:subClassOf :System ;
+                    rdfs:comment "Die Klasse \"Bibliotheksvorgang\" beherbergt alle Vorgänge, die in der Bibliothek getätigt werden." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Buch
+:Buch rdf:type owl:Class ;
+      rdfs:subClassOf :Print ;
+      rdfs:comment "\"Buch\"" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#CD
+:CD rdf:type owl:Class ;
+    rdfs:subClassOf :Medium ;
+    rdfs:comment "\"CD\" - Compact Disc" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#DVD
+:DVD rdf:type owl:Class ;
+     rdfs:subClassOf :Medium ;
+     rdfs:comment "\"DVD\" -  Digital Versatile Disc" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Gast
+:Gast rdf:type owl:Class ;
+      rdfs:subClassOf :Gruppe ;
+      rdfs:comment "Ein \"Gast\" hat nur geringe Zugriffsrechte, die nach Ablauf eines Datums verfallen. Dies kann zum Beispiel ein Student aus dem Ausland sein, der nur für kurze Zeit an dem Standort der Bibliothek ist." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Grafikoberfläche
+:Grafikoberfläche rdf:type owl:Class ;
+                  rdfs:subClassOf :System ;
+                  rdfs:comment "Die \"Grafikoberfläche\" ist die Front-End Lösung des Systems, welche der Nutzer und die Verwaltung zu Gesicht bekommen." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Gruppe
+:Gruppe rdf:type owl:Class ;
+        rdfs:comment "\"Gruppe\" ist die Oberklasse für die unterschiedlichen Zugriffsberechtigungen." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Herausgeber
+:Herausgeber rdf:type owl:Class ;
+             rdfs:subClassOf :Institutionen ;
+             rdfs:comment "Ein \"Herausgeber\" ist zum Beispiel ein Verleger von Büchern. Dieser veröffentlicht Medien." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Institutionen
+:Institutionen rdf:type owl:Class ;
+               rdfs:comment "\"Institutionen\" sind Organisationen, die einen bestimmten Zweck dienen." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Medienverwaltung
+:Medienverwaltung rdf:type owl:Class ;
+                  rdfs:subClassOf :System ;
+                  rdfs:comment "In der \"Medienverwaltung\" werden alle Medien verwaltet (hinzufügen, ändern, löschen)." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Medium
+:Medium rdf:type owl:Class ;
+        rdfs:comment "Ein \"Medium\" ist ein Objekt, das in der Bibliothek verliehen wird." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Monitor
+:Monitor rdf:type owl:Class ;
+         rdfs:subClassOf :System ;
+         rdfs:comment "Der \"Monitor\" überwacht das gesamte System. Er kann Auskunft über den Status von allen Medien geben und Warnungen und Mahnungen selbstständig verschicken." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Netzwerk
+:Netzwerk rdf:type owl:Class ;
+          rdfs:comment "Das \"Netzwerk\" ist die Schnittstelle zur Außenwelt. Somit haben \"Registrierte_Nutzer\" auch von außerhalb der Bibliothek Zugriff auf das System." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Nutzer
+:Nutzer rdf:type owl:Class ;
+        rdfs:subClassOf :Person ;
+        rdfs:comment "Ein \"Nutzer\" ist eine Person, die das Bibliotheksystem verwendet." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Nutzerverwaltung
+:Nutzerverwaltung rdf:type owl:Class ;
+                  rdfs:subClassOf :System ;
+                  rdfs:comment "In der \"Nutzerverwaltung\" werden alle Nutzer verwaltet (hinzufügen, ändern, löschen)." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Person
+:Person rdf:type owl:Class ;
+        rdfs:comment "Eine \"Person\" ist ein Mensch." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Print
+:Print rdf:type owl:Class ;
+       rdfs:subClassOf :Medium ;
+       rdfs:comment "Ein \"Print\"-Medium sind all die Medien, die gedruckt wurden. Als Beispiel gelten hierbei das \"Buch\", die \"Proschüre\" und die \"Zeitschrift\"." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Proschüre
+:Proschüre rdf:type owl:Class ;
+           rdfs:subClassOf :Print ;
+           rdfs:comment "\"Proschüre\"" .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Registrierter_Nutzer
+:Registrierter_Nutzer rdf:type owl:Class ;
+                      rdfs:subClassOf :Gast ;
+                      rdfs:comment "Ein \"Registrierter_Nutzer\" erbt von der \"Gast\"-Klasse und ist in dem System registriert. Er hat zudem mehr Rechte, als der Gast." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Sonstiges
+:Sonstiges rdf:type owl:Class ;
+           rdfs:subClassOf :Medium ;
+           rdfs:comment "\"Sonstiges\" umfasst all die Medien, die wir hier nicht mit aufgezählt haben." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Suchmodul
+:Suchmodul rdf:type owl:Class ;
+           rdfs:subClassOf :System ;
+           rdfs:comment "Das \"Suchmodul\" ist für die Suche der Medien aus der Datenbank zuständig." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#System
+:System rdf:type owl:Class ;
+        rdfs:comment "Die Klasse \"System\" beschreibt die gesamte Bibliothek." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Verwaltung
+:Verwaltung rdf:type owl:Class ;
+            rdfs:subClassOf :Gruppe ;
+            rdfs:comment "Die \"Verwaltung\" hat das Recht auf alle Verwaltungsmodule zuzugreifen." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Verwaltungsoberfläche
+:Verwaltungsoberfläche rdf:type owl:Class ;
+                       rdfs:subClassOf :Grafikoberfläche ;
+                       rdfs:comment "Die \"Verwaltungsoberfläche\" ist die Oberfläche die die \"Verwaltung\" verwenden kann." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Vorbestellvorgang
+:Vorbestellvorgang rdf:type owl:Class ;
+                   rdfs:subClassOf :Bibliotheksvorgang ;
+                   rdfs:comment "Ein \"Vorbestellvorgang\" ist der Vorgang der für das Vorbestellen eines Buches zuständig ist." .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Zeitschrift
+:Zeitschrift rdf:type owl:Class ;
+             rdfs:subClassOf :Print ;
+             rdfs:comment "\"Zeitschrift\"" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Ausleihvorgang1
+:Ausleihvorgang1 rdf:type owl:NamedIndividual ,
+                          :Ausleihvorgang ;
+                 :beteiligt_an :Buch1 ,
+                               :Nutzer1 ;
+                 :Ausleihdatum "2017-11-21T13:41:52"^^xsd:dateTime ;
+                 :Ausleihdauer "14"^^xsd:int .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Autor1
+:Autor1 rdf:type owl:NamedIndividual ,
+                 :Autor ;
+        :Geburtsdatum "1964-10-26T21:32:00"^^xsd:dateTime ;
+        :Nachname "Lustig"^^xsd:string ;
+        :Vorname "Peter"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Buch1
+:Buch1 rdf:type owl:NamedIndividual ,
+                :Buch ;
+       :hat_Autor :Autor1 ;
+       :wurde_herausgegeben_von :Herausgeber1 ;
+       :Erscheinungsdatum "2001-10-26T21:32:52"^^xsd:dateTime ;
+       :Internationale-ID "00-88-6555-2256-772221"^^xsd:string ;
+       :Kurzbeschreibung "Ihr wolltet schon immer mal Stricken lernen? Dann ist dieses Werk genau das richtige für Anfänger. Hier lernt ihr in schnellen, gut erklärten Schritten, wie man richtig strickt."^^xsd:string ;
+       :Medium-ID "542145"^^xsd:long ;
+       :Titel "DIY - Stricken für Anfänger"^^xsd:string ;
+       :ist_ausgeliehen "true"^^xsd:boolean ;
+       :ist_vorbestellt "true"^^xsd:boolean ;
+       :maximale_Ausleihdauer "14"^^xsd:int .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Herausgeber1
+:Herausgeber1 rdf:type owl:NamedIndividual ,
+                       :Herausgeber ;
+              :Firmenname "Schlechte Bücher Co. KG GmbH AG"^^xsd:string ;
+              :Firmensitz "Deutschland, Hamburg"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Monitor1
+:Monitor1 rdf:type owl:NamedIndividual ,
+                   :Monitor ;
+          :überwacht :Ausleihvorgang1 ,
+                     :Vorbestellvorgang1 .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Nutzer1
+:Nutzer1 rdf:type owl:NamedIndividual ,
+                  :Nutzer ;
+         :Mitglied_bei :sGastgruppe ;
+         :Geburtsdatum "1998-06-18T03:32:52"^^xsd:dateTime ;
+         :Nachname "Müller"^^xsd:string ;
+         :Nutzer-ID "6854618"^^xsd:int ;
+         :Vorname "Chantalle"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Nutzer2
+:Nutzer2 rdf:type owl:NamedIndividual ,
+                  :Nutzer ;
+         :Mitglied_bei :sReggruppe ;
+         :Geburtsdatum "1996-12-24T12:03:00"^^xsd:dateTime ;
+         :Nachname "Krause"^^xsd:string ;
+         :Nutzer-ID "123"^^xsd:int ;
+         :Vorname "Kevin Günther"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#Vorbestellvorgang1
+:Vorbestellvorgang1 rdf:type owl:NamedIndividual ,
+                             :Vorbestellvorgang ;
+                    :beteiligt_an :Buch1 ,
+                                  :Nutzer2 .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#sGastgruppe
+:sGastgruppe rdf:type owl:NamedIndividual ,
+                      :Gast ;
+             :Zugangsberechtigung_bis "2017-12-24T18:00:00"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/anton/ontologies/2017/10/untitled-ontology-4#sReggruppe
+:sReggruppe rdf:type owl:NamedIndividual ,
+                     :Registrierter_Nutzer ;
+            :Zugangsberechtigung_bis "2019-01-31T18:00:00"^^xsd:dateTime .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
