@@ -64,9 +64,10 @@ Apparat 01
 
 === 6. Produktleistungen
 
-*Suche von Medium in Katalog: 100ms bei 10.000 Medien im Katalog
-*Suche von Benutzer in Mitarbeiterverwaltung : 200ms bei 10.000 Benutzern in der Datenbank
-*Prüfen der Ausleihvorgänge auf Überfälligkeit: 5min bei 100.000 Ausleihvorgängen in der Datenbank
+* Suche von Medium in Katalog: 100ms bei 10.000 Medien im Katalog
+* Suche von Benutzer in Mitarbeiterverwaltung : 200ms bei 10.000 Benutzern in der Datenbank
+* Prüfen der Ausleihvorgänge auf Überfälligkeit: 5min bei 500.000 Bibliotheksvorgängen in der Datenbank
+* Suchen von Vorbestellvorgängen: 2 s bei 500.000 Bibliotheksvorgängen
 
 === 7. Qualitätsanforderungen
 
