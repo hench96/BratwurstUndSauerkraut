@@ -32,7 +32,7 @@
 
 ==== 1.2 Wunschkriterien
 
-* /W10/ Das Interface soll übersichtlich und zudem noch einfach zu bedienen sein.
+* /W10/ Das GUI soll übersichtlich und zudem noch einfach zu bedienen sein.
 * /W20/ Nutzer können über ihre Nutzerseite Medien ausleihen und bekommen über E-Mail ein Abholticket zur Abholung zugesandt.
 
 ==== 1.3 Abgrenzungskriterien
@@ -87,7 +87,7 @@ Mitarbeiter und Studenten der Technischen Universität Dresden. Dies lässt sich
 
 ==== 3.4 Produkt - Schnittstellen
 
-image::/Bilder/Contextdiagram2.jpeg[Kontextdiagramm, 50%, title="Kontextdiagram"]
+image::/Bilder/Contextdiagram2.jpeg[Kontextdiagramm, 50%, title="Kontextdiagramm"]
 
 === 4. Produktinformationen
 
@@ -137,11 +137,11 @@ image::/Bilder/UseCase.jpg[Anwendungsfälle, 100%, title="Anwendungsfälle"]
 
 === 7. Benutzeroberfläche
 
-* /B10/ Standardmäßig ist das Wondows-Regelwerk zu beachten.
+* /B10/ Standardmäßig ist das Windows-Regelwerk zu beachten.
 * /B20/ Die Bedienungsoberfläche ist auf Mausbedienung auszulegen.
 * /B30/ Die Bedienungsoberfläche ist für Web-Browser zu erstellen.
 	** Im Kopf befindet sich ein Menü. Die Hauptelemente werden zentral im Hauptrahmen angezeigt.
-	** Details befinden sich in den Gui-Skizzen.
+	** Details befinden sich in den GUI-Skizzen.
 * /B40/ Es werden folgende Rollen unterschieden:
 [options="header"]
 |===
@@ -210,4 +210,5 @@ image::/Bilder/Administrator.jpg[Administratorzugang, 100%, title="Administrator
 
 === 10. Glossar / Ontologie
 
-NOTE: Braucht kein SChwein
+Orgware - Zusätzliche Rahmenbedingungen
+GUI - (engl. graphical user interface) grafische Benutzeroberfläche
