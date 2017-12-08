@@ -54,13 +54,13 @@ Insbesondere soll ein Angebot für Wartung und Pflege beiliegen.
 Als Liefertermin für die Software ist der 31.11.2018 vorgesehen.
 
 ==== Ansprechstelle und Lieferort
-Technische Universität Dresden
-Fakultät Informatik
-Herr Hermann Mann
-Nöthnitzerstraße 46
-01187 Dresden
-Telefon 0351 123456789
-Apparat 01
+Technische Universität Dresden +
+Fakultät Informatik +
+Herr Hermann Mann +
+Nöthnitzerstraße 46 +
+01187 Dresden +
+Telefon 0351 123456789 +
+Apparat 01 +
 
 === 6. Produktleistungen
 
