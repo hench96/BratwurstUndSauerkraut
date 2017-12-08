@@ -64,7 +64,9 @@ Apparat 01
 
 === 6. Produktleistungen
 
-NOTE: ToDo; Zeit- oder Genauigkeitsanforderungen von Funktionen
+*Suche von Medium in Katalog: 100ms bei 10.000 Medien im Katalog
+*Suche von Benutzer in Mitarbeiterverwaltung : 200ms bei 10.000 Benutzern in der Datenbank
+*Prüfen der Ausleihvorgänge auf Überfälligkeit: 5min bei 100.000 Ausleihvorgängen in der Datenbank
 
 === 7. Qualitätsanforderungen
 
