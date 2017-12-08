@@ -4,7 +4,6 @@
 == Lehrstuhlbibliothek
 
 
-NOTE: ToDo: Nummerierung einfügen.
 
 === 1. Zielbestimmung
 
@@ -28,13 +27,13 @@ NOTE: ToDo: Nummerierung einfügen.
 * /M170/ Die Verwaltung muss diese Ausleihdauer abändern können.
 * /M180/ Ein Verlängerung der Ausleihdauer muss jederzeit möglich sein, aber nur, falls das gewünschte Medium nicht vorbestellt wurde.
 * /M190/ Es muss einen Monitor geben, der selbstständig überfällige Ausleihfristen erkennt und über eine E-Mail Warnungen und Mahnungen versendet.
-* /M200/ Eine Suchfunktion muss implementiert werden, welche über alle Kataloge (Nutzer/ Medien/ Ausleih-/ Vorbestellvorgänge) nach Metadaten und Inhalt sucht.
+* /M200/ Eine Suchfunktion muss implementiert werden, welche über alle Kataloge (Nutzer/ Medien/ Ausleih-/ Vorbestellvorgänge) nach Metadaten und Inhalt sucht 
 
 
 ==== 1.2 Wunschkriterien
 
-* Das Interface soll übersichtlich und zudem noch einfach zu bedienen sein.
-* Nutzer können über ihre Nutzerseite Medien ausleihen und bekommen über E-Mail ein Abholticket zur Abholung zugesandt.
+* /W10/ Das Interface soll übersichtlich und zudem noch einfach zu bedienen sein.
+* /W20/ Nutzer können über ihre Nutzerseite Medien ausleihen und bekommen über E-Mail ein Abholticket zur Abholung zugesandt.
 
 ==== 1.3 Abgrenzungskriterien
 
