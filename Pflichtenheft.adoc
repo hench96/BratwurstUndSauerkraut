@@ -92,7 +92,7 @@ image::/Bilder/Contextdiagram2.jpeg[Kontextdiagramm, 50%, title="Kontextdiagram"
 
 === 4. Produktinformationen
 
-NOTE: ToDo
+image::/Bilder/UseCase.jpg[Anwendungsfälle, 100%, title="Anwendungsfälle"]
 
 === 5. Produktdaten
 
@@ -181,13 +181,13 @@ image::/Bilder/Administrator.jpg[Administratorzugang, 100%, title="Administrator
 
 [options="header", cols="3h, ^1, ^1, ^1, ^1, ^1"]
 |===
-|Qualitätsanforderungen	| 1 | 2 | 3 | 4 | 5	
-|Wartbarkeit			|	|   |   |   | x 
+|Qualitätsanforderungen		| 1 | 2 | 3 | 4 | 5	
+|Wartbarkeit			|   |   |   |   | x 
 |Erweiterbarkeit		|   |   | x |   |	
-|Benutzerfreundlichkeit	|	|   |   | x |   
-|Skalierbarkeit			|	| x |   |   |   
+|Benutzerfreundlichkeit		|   |   |   | x |   
+|Skalierbarkeit			|   | x |   |   |   
 |Zuverlässigkeit		|   |   | x |   |	
-|Sicherheit				|   |   |   | x |	
+|Sicherheit			|   |   |   | x |	
 |Leistungsfähigkeit		|   |	| x |   |	
 |===
 
