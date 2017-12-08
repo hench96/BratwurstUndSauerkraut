@@ -15,7 +15,7 @@ In das Netzwerk sind von der Universität standartisierte und private Rechnersys
 
 === 3. Produktübersicht
 
-image::/Bilder/UseCase.jpg[Anwendungsfälle, 100%, title="Anwendungsfälle"]
+image::./Bilder/UseCase.jpg[Anwendungsfälle, 100%, title="Anwendungsfälle"]
 
 === 4. Produktfunktionen
 
