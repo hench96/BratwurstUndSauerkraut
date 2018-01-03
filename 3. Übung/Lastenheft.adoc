@@ -80,7 +80,8 @@ image::./Bilder/UseCase.jpg[Anwendungsfälle, 100%, title="Anwendungsfälle"]
 |===
 
 
-===8. Lieferung
+=== 8. Lieferung
+
 ==== Lieferumfang
 Das Produkt muss installationsfertig auf einem gängigen Speichermedium (Flashdrive, CD/DVD, 3.5 '' Floppy Disk) ausgeliefert werden. Außerdem soll eine detaillierte Dokumentation im PDF-Format mit geliefert werden.
 Die Dokumentation umfasst:
