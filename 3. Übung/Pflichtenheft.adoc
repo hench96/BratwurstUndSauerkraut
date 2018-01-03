@@ -38,6 +38,7 @@
 ==== 1.3 Abgrenzungskriterien
 
 Dies ist eine reine Verwaltungssoftware. Die Software setzt ein funktionierendes Netzwerk voraus (Netzwerktreiber und Ähnliches wird nicht bereitgestellt). Zudem ist keine Buchhaltung für Mahnungsgebühren enthalten.
+Die Softwaresprache ist Deutsch.
 
 === 2. Produkteinsatz
 
@@ -157,7 +158,7 @@ image::./Bilder/UseCase.jpg[Anwendungsfälle, 100%, title="Anwendungsfälle"]
 
 /G10/ Anmeldebildschirm
 
-image::./Bilder/Loggin.jpg[Anmeldebildschirm, 100%, title="Anmeldebildschirm"]
+image::./Bilder/Login.jpg[Anmeldebildschirm, 100%, title="Anmeldebildschirm"]
 
 /G20/ Gastzugang
 

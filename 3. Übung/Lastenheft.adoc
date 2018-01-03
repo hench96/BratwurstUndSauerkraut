@@ -38,6 +38,49 @@ image::./Bilder/UseCase.jpg[Anwendungsfälle, 100%, title="Anwendungsfälle"]
 * Das System soll  eine Suche über die gesamten Kataloge (Nutzer/ Medien/ Ausleih-/ Vorbestellvorgänge) anbieten. Es soll eine Suche über Metadaten und Inhalt möglich sein.
 
 === 5. Produktdaten
+==== 5.1 Nutzerdaten
+* /D10/ Daten von registrierter Nutzer (max. 50.000)
+** NutzerID, Vorname, Nachname, Geburtsdatum, E-Mail Adresse, Gruppe
+* /D11/ Daten von Gästen (max. 10.000)
+** NutzerID, Vorname, Nachname, Geburtsdatum, E-Mail Adresse, Zugangsberechtigung_bis, Gruppe
+* /D20/ Personaldaten (max. 100)
+** PersonalID, Vorname, Nachname, Geburtsdatum, E-Mail Adresse, Gruppe
+
+==== 5.2 Mediendaten
+* /D30/ Mediendaten (max. 1.000.000)
+** InternationaleID, Erscheinungsdatum, MediumID, Titel, maximale_Ausleihdauer, Kurzbeschreibung, ist_vorbestellt, ist_ausgeliehen, Autor, Herausgeber, Typ
+* /D40/ Typ (für die Mediendaten)
+** DVD, CD, Sonstiges, Buch, Zeitschrift, Proschüre
+
+==== 5.3 Vorgangsdaten
+* /D50/ Ausleihvorgang (max. 100.000)
+** Ausleihdauer, Ausleihdatum, Medium, Nutzer
+* /D60/ Vorbestellvorgang (max. 100.000)
+** Medium, Nutzer
+
+=== 6. Produktleistungen
+
+* Suche von Medium in Katalog: 100ms bei 10.000 Medien im Katalog
+* Suche von Benutzer in Mitarbeiterverwaltung : 200ms bei 10.000 Benutzern in der Datenbank
+* Prüfen der Ausleihvorgänge auf Überfälligkeit: 5min bei 500.000 Bibliotheksvorgängen in der Datenbank
+* Suchen von Vorbestellvorgängen: 2 s bei 500.000 Bibliotheksvorgängen
+
+=== 7. Qualitätsanforderungen
+
+[options="header", cols="3h, ^1, ^1, ^1, ^1, ^1"]
+|===
+|Qualitätsanforderungen		| 1 | 2 | 3 | 4 | 5	
+|Wartbarkeit			|   |   |   |   | x 
+|Erweiterbarkeit		|   |   | x |   |	
+|Benutzerfreundlichkeit		|   |   |   | x |   
+|Skalierbarkeit			|   | x |   |   |   
+|Zuverlässigkeit		|   |   | x |   |	
+|Sicherheit			|   |   |   | x |	
+|Leistungsfähigkeit		|   |	| x |   |	
+|===
+
+
+===8. Lieferung
 ==== Lieferumfang
 Das Produkt muss installationsfertig auf einem gängigen Speichermedium (Flashdrive, CD/DVD, 3.5 '' Floppy Disk) ausgeliefert werden. Außerdem soll eine detaillierte Dokumentation im PDF-Format mit geliefert werden.
 Die Dokumentation umfasst:
@@ -61,17 +104,3 @@ Nöthnitzerstraße 46 +
 01187 Dresden +
 Telefon 0351 123456789 +
 Apparat 01 +
-
-=== 6. Produktleistungen
-
-* Suche von Medium in Katalog: 100ms bei 10.000 Medien im Katalog
-* Suche von Benutzer in Mitarbeiterverwaltung : 200ms bei 10.000 Benutzern in der Datenbank
-* Prüfen der Ausleihvorgänge auf Überfälligkeit: 5min bei 500.000 Bibliotheksvorgängen in der Datenbank
-* Suchen von Vorbestellvorgängen: 2 s bei 500.000 Bibliotheksvorgängen
-
-=== 7. Qualitätsanforderungen
-
-* Die Lieferung ist wie im Abschnitt Lieferumfang erfolgt.
-* Die Software läuft stabil auf den Rechnern der Universität.
-* Alle in Produktfunktionen aufgelisteten Anforderungen müssen gewährleistet sein. Dies soll durch entsprechende Test nachgewiesen werden.
-* Erfolgreicher Abschluss eines mindestens vierwöchigen Beta-Tests durch den Nutzerkreis.
