@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://main" xmlns:apachesoap="http://xml.apache.org/xml-soap2" xmlns:impl="http://main" xmlns:intf="http://main" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on May 20, 2008 (05:12:03 CEST)-->
+ <wsdl:types>
+  <schema targetNamespace="http://main" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOf_soapenc_string">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="soapenc:string[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="SimpleModel">
+    <sequence>
+     <element name="loggedIn" type="xsd:boolean"/>
+     <element name="port" type="xsd:int"/>
+     <element name="username" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ExtendedModel">
+    <complexContent>
+     <extension base="impl:SimpleModel">
+      <sequence>
+       <element name="array" nillable="true" type="impl:ArrayOf_soapenc_string"/>
+       <element name="enum" nillable="true" type="impl:ExtendedModel_MyEnum"/>
+       <element name="float" type="xsd:float"/>
+       <element name="long" type="xsd:long"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="isLoggedInRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setFloatResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getEnumRequest">
+
+   </wsdl:message>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   <wsdl:portType name="ExtendedModel">
+
+      <wsdl:operation name="getLong">
+
+         <wsdl:input message="impl:getLongRequest" name="getLongRequest"/>
+
+         <wsdl:output message="impl:getLongResponse" name="getLongResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFloat">
+
+         <wsdl:input message="impl:getFloatRequest" name="getFloatRequest"/>
+
+         <wsdl:output message="impl:getFloatResponse" name="getFloatResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getArray">
+
+         <wsdl:input message="impl:getArrayRequest" name="getArrayRequest"/>
+
+         <wsdl:output message="impl:getArrayResponse" name="getArrayResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFloat" parameterOrder="value">
+
+         <wsdl:input message="impl:setFloatRequest" name="setFloatRequest"/>
+
+         <wsdl:output message="impl:setFloatResponse" name="setFloatResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLong" parameterOrder="value">
+
+         <wsdl:input message="impl:setLongRequest" name="setLongRequest"/>
+
+         <wsdl:output message="impl:setLongResponse" name="setLongResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEnum">
+
+         <wsdl:input message="impl:getEnumRequest" name="getEnumRequest"/>
+
+         <wsdl:output message="impl:getEnumResponse" name="getEnumResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="fromSimpleModel" parameterOrder="model">
+
+         <wsdl:input message="impl:fromSimpleModelRequest" name="fromSimpleModelRequest"/>
+
+         <wsdl:output message="impl:fromSimpleModelResponse" name="fromSimpleModelResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEnum" parameterOrder="value">
+
+         <wsdl:input message="impl:setEnumRequest" name="setEnumRequest"/>
+
+         <wsdl:output message="impl:setEnumResponse" name="setEnumResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="toSimpleModel">
+
+         <wsdl:input message="impl:toSimpleModelRequest" name="toSimpleModelRequest"/>
+
+         <wsdl:output message="impl:toSimpleModelResponse" name="toSimpleModelResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setArray" parameterOrder="value">
+
+         <wsdl:input message="impl:setArrayRequest" name="setArrayRequest"/>
+
+         <wsdl:output message="impl:setArrayResponse" name="setArrayResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPort">
+
+         <wsdl:input message="impl:getPortRequest" name="getPortRequest"/>
+
+         <wsdl:output message="impl:getPortResponse" name="getPortResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUsername">
+
+         <wsdl:input message="impl:getUsernameRequest" name="getUsernameRequest"/>
+
+         <wsdl:output message="impl:getUsernameResponse" name="getUsernameResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPort" parameterOrder="port">
+
+         <wsdl:input message="impl:setPortRequest" name="setPortRequest"/>
+
+         <wsdl:output message="impl:setPortResponse" name="setPortResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isLoggedIn">
+
+         <wsdl:input message="impl:isLoggedInRequest" name="isLoggedInRequest"/>
+
+         <wsdl:output message="impl:isLoggedInResponse" name="isLoggedInResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLoggedIn" parameterOrder="loggedIn">
+
+         <wsdl:input message="impl:setLoggedInRequest" name="setLoggedInRequest"/>
+
+         <wsdl:output message="impl:setLoggedInResponse" name="setLoggedInResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setUsername" parameterOrder="username">
+
+         <wsdl:input message="impl:setUsernameRequest" name="setUsernameRequest"/>
+
+         <wsdl:output message="impl:setUsernameResponse" name="setUsernameResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ExtendedModelSoapBinding" type="impl:ExtendedModel">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http11"/>
+
+      <wsdl:operation name="getLong">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLongRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLongResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFloat">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFloatRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFloatResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getArray">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getArrayRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getArrayResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFloat">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFloatRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFloatResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLong">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLongRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLongResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEnum">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEnumRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEnumResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="fromSimpleModel">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="fromSimpleModelRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="fromSimpleModelResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEnum">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setEnumRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setEnumResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="toSimpleModel">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="toSimpleModelRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="toSimpleModelResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setArray">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setArrayRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setArrayResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPort">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPortRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPortResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUsername">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUsernameRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUsernameResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPort">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setPortRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setPortResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isLoggedIn">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isLoggedInRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isLoggedInResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLoggedIn">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLoggedInRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLoggedInResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setUsername">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setUsernameRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setUsernameResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://main" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ExtendedModelService_Impl">
+
+      <wsdl:port binding="impl:ExtendedModelSoapBinding" name="ExtendedModel">
+
+         <wsdlsoap:address location=" ."/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
