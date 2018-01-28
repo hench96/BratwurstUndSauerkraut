@@ -1,1 +1,5 @@
 C:\Users\hendr\Desktop\SWT2\Git
+*.wsdl
+.settings/
+.project
+.classpath
